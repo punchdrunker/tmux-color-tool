@@ -20,21 +20,25 @@
     </div>
     <div class="color-palette">
       <h3>Status background</h3>
-      <div
-        class="color-item"
-        v-for="color in colors"
-        :key="color.id"
-        @click="onClick2(color.rgb)"
-        :style="{ background: color.rgb }"
-      />
+      <div class="palette">
+        <div
+          class="color-item"
+          v-for="color in colors"
+          :key="color.id"
+          @click="onClick2(color.rgb)"
+          :style="{ background: color.rgb }"
+        />
+      </div>
       <h3>Status foreground</h3>
-      <div
-        class="color-item"
-        v-for="color in colors"
-        :key="color.id"
-        @click="onClick3(color.rgb)"
-        :style="{ background: color.rgb }"
-      />
+      <div class="palette">
+        <div
+          class="color-item"
+          v-for="color in colors"
+          :key="color.id"
+          @click="onClick3(color.rgb)"
+          :style="{ background: color.rgb }"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -118,5 +122,8 @@ a {
   border-color: black;
   border-width: 1px;
   border-style: solid;
+}
+.palette {
+  display: flex;
 }
 </style>
